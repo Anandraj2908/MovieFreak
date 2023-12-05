@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import  fetchDataFromApi  from './utils/api'
 import { useSelector, useDispatch } from 'react-redux'
+import { BrowserRouter,Routes, Route } from 'react-router-dom'
 
 //import components
 import Header from "./components/header/Header"
@@ -12,28 +12,19 @@ import Home from "./pages/home/Home"
 import SearchResult from './pages/searchResult/SearchResult'
 
 function App() {
-  const dispatch = useDispatch();
 
-
-  const apiTest = () => {
-    fetchDataFromApi('/movie/popular').then(
-      (res) => res.json()
-    ).then((data) => {
-      return data
-    }).catch((error) => {
-      return error
-    })
-  }
-
-  useEffect( () => {
-    apiTest()
-  }, [])
   return (
-    <>
-      
-        <pre>Hello</pre>
-
-    </>
+    <BrowserRouter>
+    <Header/>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/:mediaType/:id" element={<Details/>}/>
+      <Route path="/search/:query" element={<SearchResult/>}/>
+      <Route path="/explore/:mediaType" element={<Explore/>}/>
+      <Route path="*" element={<PageNotFound/>}/>
+    </Routes>
+    <Footer/>
+    </BrowserRouter>
   )
 }
 
