@@ -2,12 +2,13 @@ import { useState, useEffect } from 'react'
 import  fetchDataFromApi  from './utils/api'
 
 function App() {
+  let MyObj=null;
 
   const apiTest = () => {
-    const res = fetchDataFromApi('/movie/popular').then(
+    fetchDataFromApi('/movie/popular').then(
       (res) => res.json()
     ).then((data) => {
-      console.log(data)
+      return data
     }).catch((error) => {
       return error
     })
@@ -19,7 +20,7 @@ function App() {
   return (
     <>
       
-        <h1>Hello</h1>
+        <pre>Hello</pre>
 
     </>
   )
