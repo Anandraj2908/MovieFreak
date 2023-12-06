@@ -22,14 +22,22 @@ const HeroBanner = () => {
   const {data, loading} = useFetch("/movie/upcoming")
   const [backgroundUrl, setBackgroundUrl] = useState("");
   useEffect( () => {
+    if(data?.results)
     setBackgroundUrl(url.backdrop+data?.results?.[Math.floor(Math.random()*20)].backdrop_path)
-    console.log(backgroundUrl)
+  console.log(backgroundUrl)
   }, [data])
 
 
   return (
     <div className='heroBanner'>
-      <div className="wrapper">
+
+      {!loading &&
+        <div className="backdrop-img">
+          <Img src={backgroundUrl}/>
+        </div>
+      }
+      
+      <ContentWrapper className="wrapper">
         <div className="heroBannerContent">
           <span>Welcome</span>
           <span>
@@ -46,7 +54,7 @@ const HeroBanner = () => {
 
           </form>
         </div>
-      </div>
+      </ContentWrapper>
     </div>
   )
 }
