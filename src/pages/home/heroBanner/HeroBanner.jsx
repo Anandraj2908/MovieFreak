@@ -24,7 +24,6 @@ const HeroBanner = () => {
   useEffect( () => {
     if(data?.results)
     setBackgroundUrl(url.backdrop+data?.results?.[Math.floor(Math.random()*20)].backdrop_path)
-  console.log(backgroundUrl)
   }, [data])
 
 
@@ -39,7 +38,7 @@ const HeroBanner = () => {
       <div className="opacity-layer"></div>
       <ContentWrapper className="wrapper ">
         <div className="heroBannerContent">
-          <span className='title'>Welcome</span>
+          <span className='title'>Welcome.</span>
           <span className='subTitle'>
             Millions of movies, TV shows and people to discover.
             Explore now.
