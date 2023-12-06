@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import "./style.scss"
 
 import useFetch from '../../../hooks/useFetch';
@@ -9,7 +10,7 @@ const HeroBanner = () => {
 
   const [searchInput, setSearchInput] = useState('');
   const navigate = useNavigate();
-
+  const {url} = useSelector((state) =>state.home);
   const handelSubmit = () => {
     if(searchInput.length>0){
       navigate(`/search/${searchInput}`)
@@ -20,7 +21,8 @@ const HeroBanner = () => {
   const {data, loading} = useFetch("/movie/upcoming")
   const [backgroundUrl, setBackgroundUrl] = useState("");
   useEffect( () => {
-    setBackgroundUrl(data?.results[Math.floor(Math.random()*20)].backdrop_path)
+    setBackgroundUrl(url.backdrop+data?.results?.[Math.floor(Math.random()*20)].backdrop_path)
+    console.log(backgroundUrl)
   }, [data])
 
 

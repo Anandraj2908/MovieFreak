@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import {useDispatch } from 'react-redux'
 import { BrowserRouter,Routes, Route } from 'react-router-dom'
 
 //import components
@@ -10,8 +10,28 @@ import Details from "./pages/details/Details"
 import Explore from "./pages/explore/Explore"
 import Home from "./pages/home/Home"
 import SearchResult from './pages/searchResult/SearchResult'
+import { fetchDataFromApi } from './utils/api'
+import { getApiConfiguration } from './store/homeSlice'
 
 function App() {
+  const dispatch = useDispatch();
+
+  //fetch api configuration
+  const fetchApiConfig = () => {
+    fetchDataFromApi("/configuration")
+    .then((res) => {
+      const url = {
+        backdrop: res.images.secure_base_url+"original",
+        poster: res.images.secure_base_url+"original",
+        profile:res.images.secure_base_url+"original"
+      }
+      dispatch(getApiConfiguration(url))
+    })
+  }
+
+  useEffect(() => {
+    fetchApiConfig();
+  },[])
 
   return (
     <BrowserRouter>
