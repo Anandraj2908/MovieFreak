@@ -5,6 +5,7 @@ import {
 } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { FaHashnode,FaMedium } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 
@@ -28,12 +29,17 @@ const Footer = () => {
                 <div className="socialIcons">
                     
                     <span className="icon">
-                        <FaLinkedin />
+                        <Link to={"https://www.linkedin.com/in/anand-raj-490105216/"}>
+                            <FaLinkedin />
+                        </Link>
                     </span>
                     <span className="icon">
-                        <FaGithub />
+                        <Link to={"https://github.com/Anandraj2908"}>
+                        <FaGithub  />
+                        </Link>
                     </span>
                     <span className="icon">
+                        
                         <FaMedium />
                     </span>
                     <span className="icon">
