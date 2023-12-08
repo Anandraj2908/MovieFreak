@@ -14,18 +14,12 @@ import "./style.scss";
 const Footer = () => {
     return (
         <footer className="footer">
+            <div className="opacity-layer"></div>
             <ContentWrapper>
                 
                 <h2 className="infoText">
-                    A React project by Anand Raj
+                    A React project by NIRVAN Technologies
                 </h2>
-                <ul className="menuItems">
-                    <li className="menuItem">Terms Of Use</li>
-                    <li className="menuItem">Privacy-Policy</li>
-                    <li className="menuItem">About</li>
-                    <li className="menuItem">Blog</li>
-                    <li className="menuItem">FAQ</li>
-                </ul>
                 <div className="socialIcons">
                     
                     <span className="icon">
@@ -48,6 +42,17 @@ const Footer = () => {
                     <span className="icon">
                         <SiLeetcode />
                     </span>
+                </div>
+                <ul className="menuItems">
+                    <li className="menuItem">Terms Of Use</li>
+                    <li className="menuItem">Privacy-Policy</li>
+                    <li className="menuItem">About</li>
+                    <li className="menuItem">Blog</li>
+                    <li className="menuItem">FAQ</li>
+                </ul>
+                
+                <div className="">
+                    <h5>Made with ♥ by Anand Raj</h5>
                 </div>
             </ContentWrapper>
         </footer>
