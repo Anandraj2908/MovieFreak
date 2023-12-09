@@ -1,8 +1,24 @@
 .container{
-    color: red;
+    color: #b80f0f;
     background: linear-gradient(
             0deg,
             #15161b 0%,
             #15161b 50%
         );
+    .tail{
+        overflow-x: hidden;
+        display: flex;
+        max-width: 100%;
+        .prevBtn{
+            color: #b80fb8;
+            font-size: 100px;
+            position: relative;
+        }
+        .nextBtn{
+            color: #b80fb8;
+            font-size: 100px;
+            position: relative;
+            right: 0;
+        }
+    }
 }

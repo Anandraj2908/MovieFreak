@@ -1,6 +1,6 @@
 .switchingTabs {
     height: 34px;
-    background-color: #c63a3a;
+    background-color: #b80f0f;
     border-radius: 20px;
     padding: 2px;
     .tabItems {
@@ -21,7 +21,7 @@
             cursor: pointer;
             transition: color ease 0.3s;
             &.active {
-                color: #c63a3a;
+                color: #b80f0f;
             }
         }
         .movingBg {
