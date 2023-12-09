@@ -1,4 +1,6 @@
-.container{
+
+.contain{
+    width: 100%;
     color: #b80f0f;
     background: linear-gradient(
             0deg,
@@ -6,18 +8,30 @@
             #15161b 50%
         );
     .tail{
-        overflow-x: hidden;
-        display: flex;
-        max-width: 100%;
-        .prevBtn{
+        position: relative;
+        padding: 5px;
+        .cardsContainer{
+            display: flex;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            margin: 5px;
+        }
+        .prevBtn,.nextBtn{
+            position: absolute;
+            top:50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: #b80fb8;
-            font-size: 100px;
-            position: relative;
+            font-size: 50px;
+            border: #b80f0f solid 2px;
+            border-radius: 50%;
+
+        }
+        .prevBtn:hover,.nextBtn:hover{
+            background-color: #390839;
         }
         .nextBtn{
-            color: #b80fb8;
-            font-size: 100px;
-            position: relative;
             right: 0;
         }
     }

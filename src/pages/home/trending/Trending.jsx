@@ -1,8 +1,8 @@
 import React from 'react'
-
+import "./style.scss"
 const Trending = () => {
   return (
-    <div>
+    <div className='contain'>
       Trending
     </div>
   )
