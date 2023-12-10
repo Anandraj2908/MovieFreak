@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className='homePage '>
       <HeroBanner/>
-      <Carousel title={"Trending"} endpoints={["day","week"]}/>
+      <Trending/>
       
       
     </div>

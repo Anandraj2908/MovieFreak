@@ -11,47 +11,48 @@ import Img from '../../../components/lazyLoadImage/Img';
 import Card from './card/Card';
 import "./style.scss"
 
-const Carousel = ({title}) => {
-  const [endpoint, setEndpoint] = useState("day");
+const Carousel = ({ data, loading, endpoint, title }) => {
 
-  const { data, loading } = useFetch(`/trending/movie/${endpoint}`);
+  const {url} = useSelector((state) => state.home);
 
-  const onTabChange = (tab) => {
-      setEndpoint(tab === "Day" ? "day" : "week");
-  };
-
-  const {url} = useSelector((state) => state.home)
+  const skItem = () => {
+    return (
+        <div className="skeletonItem">
+            <div className="posterBlock skeleton"></div>
+            <div className="textBlock">
+                <div className="title skeleton"></div>
+                <div className="date skeleton"></div>
+            </div>
+        </div>
+    );
+};
   
   return (
     <div className="carouselContainer">
-      <ContentWrapper>
-      <BsFillArrowLeftCircleFill className='prevBtn'/>
+      <ContentWrapper className="contentWrapper">
+        <BsFillArrowLeftCircleFill className='prevBtn'/>
         <BsFillArrowRightCircleFill className='nextBtn'/>
         {loading ? (
-          <span>Loading...</span>
+          <div className="loadingSkeleton">
+          {skItem()}
+          {skItem()}
+          {skItem()}
+          {skItem()}
+          {skItem()}
+      </div>
         ) : (
           <div className="carouselItems">
               {
-              data?.results?.map((item) => {
+              data?.map((item) => {
                 const posterUrl = item.poster_path? url.poster + item.poster_path:noImage ;
-                return(<Card className="carouselItem" key={item.id} image={posterUrl}/>);
+                return(<Card className="carouselItem" key={item.id} imageUrl={posterUrl} item={item}/>);
                 
               })}
           </div>
           )}
-        
       </ContentWrapper>
     </div>
   )
 }
 
 export default Carousel
-
-
-// {data?.map((item)=>{
-//   const posterUrl = item.poster_path? url.poster + item.poster_path:noImage ;
-//   return(
-//       <Card imageUrl={posterUrl}/>
-//   );
-
-// })}

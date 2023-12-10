@@ -1,3 +1,14 @@
-.contain{
-    background-color: antiquewhite;
+
+.carouselSection{
+    background: linear-gradient(
+            0deg,
+            #15161b 0%,
+            #15161b 50%
+        );
+    .contentWrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
 }
