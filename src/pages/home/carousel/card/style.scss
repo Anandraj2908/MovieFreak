@@ -1,3 +1,10 @@
-.card{
-    width: 30px;
+.myCard{
+    @media screen and (min-width: 768px) {
+        min-width:200px;
+    }
+    min-width:100px;
+    .title{
+        font-weight:600;
+        color: #9CA3AF;
+    }
 }
