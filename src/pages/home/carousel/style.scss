@@ -1,38 +1,69 @@
+// @import "../../../mixins.scss";
 
-.contain{
+// .contain{
+//     width: 100%;
+//     color: #b80f0f;
+//     background: linear-gradient(
+//             0deg,
+//             #15161b 0%,
+//             #15161b 50%
+//         );
+//     .tail{
+//         position: relative;
+//         padding: 5px;
+//         .cardsContainer{
+//             display: flex;
+//             overflow-x: hidden;
+//             scroll-behavior: smooth;
+//             margin: 5px;
+//         }
+//         .prevBtn,.nextBtn{
+//             position: absolute;
+//             top:50%;
+//             display: none;
+//             justify-content: center;
+//             align-items: center;
+//             color: #b80fb8;
+//             font-size: 50px;
+//             border: #b80f0f solid 2px;
+//             border-radius: 50%;
+
+//         }
+//         @include sm{
+//             .prevBtn,.nextBtn{
+//                 display:flex;
+//             }
+//         }
+//         .prevBtn:hover,.nextBtn:hover{
+//             background-color: #390839;
+//         }
+//         .nextBtn{
+//             right: 0;
+//         }
+//     }
+// }
+
+.carouselContainer{
     width: 100%;
     color: #b80f0f;
+    position: relative;
     background: linear-gradient(
             0deg,
             #15161b 0%,
             #15161b 50%
         );
-    .tail{
-        position: relative;
-        padding: 5px;
-        .cardsContainer{
-            display: flex;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-            margin: 5px;
-        }
-        .prevBtn,.nextBtn{
-            position: absolute;
-            top:50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #b80fb8;
-            font-size: 50px;
-            border: #b80f0f solid 2px;
-            border-radius: 50%;
-
-        }
-        .prevBtn:hover,.nextBtn:hover{
-            background-color: #390839;
-        }
-        .nextBtn{
-            right: 0;
-        }
+        
+    .carouselItems{
+        display: flex;
+        overflow-x: hidden;
     }
+    .prevBtn,.nextBtn{
+        position: absolute;
+        top: 50%;
+    }
+    .nextBtn{
+        right: 0;
+        
+    }
+    
 }

@@ -6,7 +6,7 @@ const initialState = {
 }
 
 export const homeSlice = createSlice({
-    name:'todo',
+    name:'home',
     initialState,
     reducers:{
         getApiConfiguration: (state, action) => {
