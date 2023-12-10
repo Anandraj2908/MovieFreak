@@ -2,9 +2,20 @@
     @media screen and (min-width: 768px) {
         min-width:200px;
     }
-    min-width:100px;
+    @media screen and (max-width: 440px) {
+        min-width:70px;
+        
+    }
+    min-width: 100px;
     .title{
         font-weight:600;
         color: #9CA3AF;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            -webkit-line-clamp: 2; /* number of lines to show */
+            line-height: 1.5; /* line height */
+            max-height: 3em; /* (line height) * (number of lines) */
+          
     }
 }
