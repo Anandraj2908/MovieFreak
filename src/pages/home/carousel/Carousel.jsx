@@ -10,9 +10,10 @@ import useFetch from '../../../hooks/useFetch';
 import Img from '../../../components/lazyLoadImage/Img';
 import Card from './card/Card';
 import "./style.scss"
+import { useNavigate } from 'react-router-dom';
 
 const Carousel = ({ data, loading, endpoint, title }) => {
-
+  const navigate = useNavigate();
   const {url} = useSelector((state) => state.home);
 
   const skItem = () => {
@@ -41,11 +42,11 @@ const Carousel = ({ data, loading, endpoint, title }) => {
           {skItem()}
       </div>
         ) : (
-          <div className="carouselItems">
+          <div className="carouselItems" >
               {
               data?.map((item) => {
                 const posterUrl = item.poster_path? url.poster + item.poster_path:noImage ;
-                return(<Card className="carouselItem" key={item.id} imageUrl={posterUrl} item={item}/>);
+                return(<Card className="carouselItem"  key={item.id} imageUrl={posterUrl} item={item}/>);
                 
               })}
           </div>

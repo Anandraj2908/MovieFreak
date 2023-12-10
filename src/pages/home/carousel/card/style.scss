@@ -1,14 +1,17 @@
 .myCard{
     min-width: 160px;
-    .title{
-        font-weight:600;
+    .title,.date{
         color: #9CA3AF;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            -webkit-line-clamp: 2; /* number of lines to show */
-            line-height: 1.5; /* line height */
-            max-height: 3em; /* (line height) * (number of lines) */
-          
     }
+    .title{
+        
+        font-weight:600;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 2; /* number of lines to show */
+        line-height: 1.5; /* line height */
+        max-height: 3em; /* (line height) * (number of lines) */
+    }
+    
 }
