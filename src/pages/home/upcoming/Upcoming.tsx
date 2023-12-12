@@ -18,10 +18,9 @@ const Upcoming = () => {
     return (
         <div className="carouselSection">
             <ContentWrapper className="contentWrapper">
-                <span className="carouselTitle">Upcoming</span>
-                <SwitchTabs data={["Movies", "TV Shows"]} onTabChange={onTabChange} />
+                <span className="carouselTitle">Upcoming Movies</span>
             </ContentWrapper>
-            <Carousel data={data?.results} loading={loading} />
+            <Carousel data={data?.results} loading={loading} endpoint={endpoint} />
         </div>
     );
 }
