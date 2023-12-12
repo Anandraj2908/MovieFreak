@@ -1,7 +1,7 @@
 import React from 'react'
 import dayjs from 'dayjs'
 import "./style.scss"
-import RatingCircle from '../rating/ratingCircle'
+import RatingCircle from '../rating/RatingCircle'
 import { useNavigate } from 'react-router-dom'
 const Card = ({imageUrl,item}) => {
   const navigate = useNavigate();
