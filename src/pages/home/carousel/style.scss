@@ -57,12 +57,18 @@
     }
     .carouselItems{
         display: flex;
-        overflow-x:hidden;
+        overflow-x: scroll;
+        @media screen and (min-width: 500px){
+            overflow-x: hidden;
+        }
     }
     .prevBtn,.nextBtn{
         position: absolute;
         top: 50%;
         font-size: 30px;
+        @media screen and (max-width: 500px){
+            display: none;
+        }
     }
     .prevBtn:hover,.nextBtn:hover{
         color:#b80f0f5f;
