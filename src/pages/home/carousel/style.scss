@@ -9,7 +9,6 @@
             #15161b 0%,
             #15161b 50%
         );
-    background-color: #1ab80f;
     .contentWrapper{
         position: relative;
     }
@@ -58,7 +57,7 @@
     }
     .carouselItems{
         display: flex;
-        overflow-x:auto;
+        overflow-x:hidden;
     }
     .prevBtn,.nextBtn{
         position: absolute;

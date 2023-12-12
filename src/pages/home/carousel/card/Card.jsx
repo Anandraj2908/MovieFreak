@@ -14,7 +14,7 @@ const Card = ({imageUrl,item}) => {
       <p className='title mx-2 '>{item.title}</p>
       <p className='date mx-2 my-2'>{dayjs().format(item.release_date)}</p>
       </div>
-      <RatingProgressBar className="" rating={item.vote_average}/>
+      <RatingProgressBar className="progressBar" rating={item.vote_average}/>
       </div>
     </div>
     </div>
