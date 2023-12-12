@@ -3,6 +3,7 @@
     background-color: #b80f0f;
     border-radius: 20px;
     padding: 2px;
+    
     .tabItems {
         display: flex;
         align-items: center;
@@ -24,6 +25,10 @@
             &.active {
                 color: #b80f0f;
             }
+            @media screen and (max-width: 450px) {
+                width: 50px;
+                font-size: 8px;
+            }
         }
         .movingBg {
             height: 30px;
@@ -33,6 +38,10 @@
             position: absolute;
             left: 0;
             transition: left cubic-bezier(0.88, -0.35, 0.565, 1.35) 0.4s;
+            @media screen and (max-width: 450px) {
+                width: 50px;
+                transition: left cubic-bezier(0.88, -0.35, 0.565, 1.35) 0.2s;
+            }
         }
     }
 }
