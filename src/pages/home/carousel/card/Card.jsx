@@ -1,7 +1,7 @@
 import React from 'react'
 import dayjs from 'dayjs'
 import "./style.scss"
-import RatingCircle from '../rating/RatingCircle'
+import RatingProgressBar from '../rating/RatingProgressBar'
 import { useNavigate } from 'react-router-dom'
 const Card = ({imageUrl,item}) => {
   const navigate = useNavigate();
@@ -14,7 +14,7 @@ const Card = ({imageUrl,item}) => {
       <p className='title mx-2 '>{item.title}</p>
       <p className='date mx-2 my-2'>{dayjs().format(item.release_date)}</p>
       </div>
-      <RatingCircle className="" rating={item.vote_average}/>
+      <RatingProgressBar className="" rating={item.vote_average}/>
       </div>
     </div>
     </div>
