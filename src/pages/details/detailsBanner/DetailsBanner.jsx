@@ -9,9 +9,9 @@ import ContentWrapper from '../../../components/contentWrapper/ContentWrapper';
 import useFetch from "../../../hooks/useFetch"
 import Img from "../../../components/lazyLoadImage/Img"
 import PosterFallback from "../../../assets/noImage.svg"
-import PlayIcon from "../playIcon/PlayIcon"
+import PlayIcon from "./playIcon/PlayIcon"
 import RatingProgressBar from "../../home/carousel/rating/RatingProgressBar"
-import VideoPopup from "../videoPopup/VideoPopup"
+import VideoPopup from "./videoPopup/VideoPopup"
 
 const DetailsBanner = ({ video, crew }) => {
 
