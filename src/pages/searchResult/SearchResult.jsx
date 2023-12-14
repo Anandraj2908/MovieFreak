@@ -17,10 +17,12 @@ const SearchResult = () => {
         <div className="title">Search results of '{query}'</div>
         <div className="resultsCards">
           {!loading && data?.results.map((item) => {
-            if(item.media_type === "movie" || item.media_type === "tv")
-            return(
-              <Card item={item} imageUrl={url.backdrop+item.backdrop_path}  />
-            )
+            if(item.backdrop_path && item.media_type === "movie" || item.media_type === "tv"){
+              return(
+                <Card item={item} imageUrl={url.backdrop+item.backdrop_path}  />
+              )
+            }
+            
           })}
         </div>
       </ContentWrapper>
