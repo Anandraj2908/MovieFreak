@@ -60,8 +60,8 @@ const Carousel = ({ data, loading, endpoint}) => {
               {
               data?.map((item) => {
                 const posterUrl = item.poster_path? url.poster + item.poster_path:noImage ;
-                return(<Card className="carouselItem"  key={item.id} imageUrl={posterUrl} item={item} endpoint={endpoint}/>);
-                
+                return(
+                <Card className="carouselItem"  key={item.id} imageUrl={posterUrl} item={item} endpoint={endpoint}/>);
               })}
           </div>
           )}
