@@ -1,8 +1,28 @@
-# React + Vite
+# Movie & TV Show Search Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This website, built with React, retrieves data from themoviedb.org to showcase an extensive collection of movie and TV show details. Providing a user-friendly interface, it simplifies the search for diverse entertainment content.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Search Movies & TV Shows**: Explore a wide array of entertainment content.
+- **Detailed Information**: Access comprehensive details about movies and TV shows.
+- **User-Friendly Interface**: Easy navigation for a seamless exploration experience.
+
+## Technologies Used
+
+- **Frontend**: Developed using React.
+- **Data Source**: Fetches information from themoviedb.org.
+
+## Getting Started
+
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Install dependencies with `npm install`.
+4. Start the development server with `npm start`.
+
+## Contributors
+
+- [Anand Raj]
+- [JS DEV Hindi](https://www.youtube.com/@jsdevhindi)
+
+Feel free to contribute, report issues, or suggest improvements!
