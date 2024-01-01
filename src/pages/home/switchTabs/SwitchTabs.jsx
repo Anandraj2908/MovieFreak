@@ -1,17 +1,31 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import "./style.scss"
 
 const SwitchTabs = ({data,onTabChange}) => {
     const [selectedTab,setSelectedTab] = useState(0);
     const [left,setLeft] =useState(0);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const activeTab = (tab,index) => {
-        setLeft(index*100)
-        setTimeout(()=>{
-            setSelectedTab(index)
-        },300);
-        onTabChange(tab,index);
+        const transitionDistance = windowWidth > 450 ? 100 : 50;
+        setLeft(index * transitionDistance);
+        setTimeout(() => {
+            setSelectedTab(index);
+        }, 300);
+        onTabChange(tab, index);
     }
 
   return (

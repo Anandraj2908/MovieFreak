@@ -14,17 +14,19 @@ const Card = ({imageUrl,item, endpoint}) => {
               item.id
           }`
       )
-      }>
-    <div className="myCardContainer"> 
-      <img className="rounded-t-lg" src={imageUrl} alt="" />
-      <div className="cardContent flex p-2">
-      <div className="textContent">
-      <p className='title mx-2 '>{title}</p>
-      <p className='date mx-2 my-2'>{dayjs().format(item.release_date || item.first_air_date)}</p>
+    }>
+      <div className="myCardContainer"> 
+        <img className="rounded-t-lg" src={imageUrl} alt="" />
+        <div className="cardContent p-2">
+          <div className="textContent">
+            <p className='title mx-2 '>{title}</p>
+            <p className='date mx-2 my-2'>{dayjs().format(item.release_date || item.first_air_date)}</p>
+          </div>
+          <div className="progressBarContainer">
+          <RatingProgressBar className="progressBar" rating={item.vote_average}/>
+          </div>
+        </div>
       </div>
-      <RatingProgressBar className="progressBar" rating={item.vote_average}/>
-      </div>
-    </div>
     </div>
     
   )

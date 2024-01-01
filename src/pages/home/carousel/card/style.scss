@@ -1,5 +1,6 @@
 .myCard{
     min-width: 150px;
+    
     .title,.date{
         color: #9CA3AF;
     }
@@ -12,6 +13,28 @@
         -webkit-line-clamp: 2; /* number of lines to show */
         line-height: 1.5; /* line height */
         max-height: 3em; /* (line height) * (number of lines) */
+    }
+    .myCardContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        .cardContent{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            overflow: hidden;
+            position: relative;
+            height: 100px;
+            .progressBarContainer{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                
+            }
+            
+            
+        }
     }
     
 }
