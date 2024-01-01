@@ -22,7 +22,7 @@ This website, built with React, retrieves data from themoviedb.org to showcase a
 
 ## Contributors
 
-- [Anand Raj]
+- Anand Raj
 - [JS DEV Hindi](https://www.youtube.com/@jsdevhindi)
 
 Feel free to contribute, report issues, or suggest improvements!
