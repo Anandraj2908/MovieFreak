@@ -1,4 +1,4 @@
-# Movie & TV Show Search Website
+# MovieFreak - Movie & TV Show Search Website
 
 This website, built with React, retrieves data from themoviedb.org to showcase an extensive collection of movie and TV show details. Providing a user-friendly interface, it simplifies the search for diverse entertainment content.
 
