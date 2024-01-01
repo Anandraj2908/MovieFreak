@@ -22,7 +22,9 @@ const Card = ({imageUrl,item, endpoint}) => {
       <p className='title mx-2 '>{title}</p>
       <p className='date mx-2 my-2'>{dayjs().format(item.release_date || item.first_air_date)}</p>
       </div>
-      <RatingProgressBar className="progressBar" rating={item.vote_average}/>
+      <div className="progressBarContainer">
+          <RatingProgressBar className="progressBar" rating={item.vote_average}/>
+      </div>
       </div>
     </div>
     </div>
