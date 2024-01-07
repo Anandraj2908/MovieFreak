@@ -17,8 +17,9 @@ This website, built with React, retrieves data from themoviedb.org to showcase a
 
 1. Clone the repository.
 2. Navigate to the project directory.
-3. Install dependencies with `npm install`.
-4. Start the development server with `npm start`.
+3. Add your tmdb api key in .env folder VITE_APP_TMDB_TOKEN="your api key"
+4. Install dependencies with `npm install`.
+5. Start the development server with `npm start`.
 
 ## Contributors
 
